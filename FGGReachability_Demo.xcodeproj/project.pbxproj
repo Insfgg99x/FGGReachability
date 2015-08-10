@@ -16,6 +16,7 @@
 		E8E192F91B784D84007276E7 /* FGGReachability_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E192F81B784D84007276E7 /* FGGReachability_DemoTests.m */; };
 		E8E193081B784D9F007276E7 /* FGGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E193041B784D9F007276E7 /* FGGReachability.m */; };
 		E8E193091B784D9F007276E7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E193071B784D9F007276E7 /* Reachability.m */; };
+		E8F71FEB1B78763600A39E12 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F71FEA1B78763600A39E12 /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E8E193041B784D9F007276E7 /* FGGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGGReachability.m; sourceTree = "<group>"; };
 		E8E193061B784D9F007276E7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		E8E193071B784D9F007276E7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E8F71FEA1B78763600A39E12 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F71FEB1B78763600A39E12 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 		E8E192D01B784D83007276E7 = {
 			isa = PBXGroup;
 			children = (
+				E8F71FEA1B78763600A39E12 /* CoreTelephony.framework */,
 				E8E193021B784D9F007276E7 /* FGGReachability */,
 				E8E192DB1B784D83007276E7 /* FGGReachability_Demo */,
 				E8E192F51B784D84007276E7 /* FGGReachability_DemoTests */,
@@ -444,6 +448,7 @@
 				E8E192FE1B784D84007276E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8E192FF1B784D84007276E7 /* Build configuration list for PBXNativeTarget "FGGReachability_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				E8E193011B784D84007276E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
