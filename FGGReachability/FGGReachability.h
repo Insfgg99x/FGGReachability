@@ -8,8 +8,11 @@
 /*
  ----------------------------------------------------
  FGGReachability用法简介：
- 1.获取当前网络状态：FGGNetWorkStatus status=[FGGReachability networkStatus];
- 2.作出判断
+ 1.导入CoreTelephony.framework框架
+ 2.导入#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+ 3.导入#import <CoreTelephony/CTCarrier.h>
+ 4.获取当前网络状态：FGGNetWorkStatus status=[FGGReachability networkStatus];
+ 5.作出判断
  ==>若status==FGGNetWorkStatus2G，则当前网络状态为2G；
  ==>若status==FGGNetWorkStatusEdge，则当前网络状态为2.75G(Edge)；
  ==>若status==FGGNetWorkStatus3G，则当前网络状态为3G；
