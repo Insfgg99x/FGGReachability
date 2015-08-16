@@ -12,6 +12,7 @@
 @interface ViewController ()
 {
     UILabel *_statusLabel;
+    Reachability *_reachability;
 }
 @end
 
@@ -25,10 +26,23 @@
     [self.view addSubview:_statusLabel];
     _statusLabel.textAlignment=NSTextAlignmentCenter;
     
+    _reachability=[Reachability reachabilityForInternetConnection];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusDidChanged:) name:kReachabilityChangedNotification object:nil];
+    [_reachability startNotifier];
     
     //判断网络状态
     [self estimateNetwork];
     
+}
+-(void)networkStatusDidChanged:(NSNotification *)sender
+{
+    FGGNetWorkStatus status=[FGGReachability networkStatus];
+    if(status==FGGNetWorkStatusNotReachable)
+    {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"错误" message:@"网络状态不可用" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    [self estimateNetwork];
 }
 //判断网络状态
 -(void)estimateNetwork
